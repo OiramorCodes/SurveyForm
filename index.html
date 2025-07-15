@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FCC Survey Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="form-wrapper">
+    <h1 id="title">Paradox Free Community Feedback</h1>
+    <p id="description">Help us build something great by sharing your thoughts.</p>
+
+    <form id="survey-form">
+      <!-- Name -->
+      <div class="form-group">
+        <label id="name-label" for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="e.g. Romario Freckleton" />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label id="email-label" for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="e.g. you@example.com" />
+      </div>
+
+      <!-- Number -->
+      <div class="form-group">
+        <label id="number-label" for="number">Your Age (optional)</label>
+        <input type="number" id="number" name="age" min="13" max="99" placeholder="e.g. 21" />
+      </div>
+
+      <!-- Dropdown -->
+      <div class="form-group">
+        <label for="dropdown">How did you hear about us?</label>
+        <select id="dropdown" name="referral" required>
+          <option value="">-- Choose one --</option>
+          <option value="twitter">Twitter</option>
+          <option value="threads">Threads</option>
+          <option value="friend">Friend</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <!-- Radio -->
+      <fieldset>
+        <legend>Would you recommend Paradox Free?</legend>
+        <label><input type="radio" name="recommend" value="yes" required /> Yes</label>
+        <label><input type="radio" name="recommend" value="maybe" /> Maybe</label>
+        <label><input type="radio" name="recommend" value="no" /> No</label>
+      </fieldset>
+
+      <!-- Checkbox -->
+      <fieldset>
+        <legend>What topics do you care about? (Select all that apply)</legend>
+        <label><input type="checkbox" name="topics" value="decisions" /> Decision-making</label>
+        <label><input type="checkbox" name="topics" value="creativity" /> Creativity</label>
+        <label><input type="checkbox" name="topics" value="mental-health" /> Mental Health</label>
+        <label><input type="checkbox" name="topics" value="self-growth" /> Self-Growth</label>
+      </fieldset>
+
+      <!-- Textarea -->
+      <div class="form-group">
+        <label for="comments">Any feedback or suggestions?</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Type your thoughts..."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
